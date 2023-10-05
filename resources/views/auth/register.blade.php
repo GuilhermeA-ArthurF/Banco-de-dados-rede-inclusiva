@@ -13,9 +13,9 @@
                             <i class="nc-icon nc-tv-2"></i>
                         </div>
                         <div class="description">
-                            <h5 class="info-title">{{ __('Marketing') }}</h5>
+                            <h5 class="info-title">{{ __('Objetivo') }}</h5>
                             <p class="description">
-                                {{ __('We\'ve created the marketing campaign of the website. It was a very interesting collaboration.') }}
+                                {{ __('Um banco de dados para alunos da rede inclusiva visa centralizar e organizar informações importantes para garantir uma educação igualitária e inclusiva.') }}
                             </p>
                         </div>
                     </div>
@@ -24,9 +24,9 @@
                             <i class="nc-icon nc-html5"></i>
                         </div>
                         <div class="description">
-                            <h5 class="info-title">{{ __('Fully Coded in HTML5') }}</h5>
+                            <h5 class="info-title">{{ __('Banco de dados') }}</h5>
                             <p class="description">
-                                {{ __('We\'ve developed the website with HTML5 and CSS3. The client has access to the code using GitHub.') }}
+                                {{ __('Desenvolvemos este aplicativo utilizando diversas tecnologias modernas.') }}
                             </p>
                         </div>
                     </div>
@@ -35,9 +35,9 @@
                             <i class="nc-icon nc-atom"></i>
                         </div>
                         <div class="description">
-                            <h5 class="info-title">{{ __('Built Audience') }}</h5>
+                            <h5 class="info-title">{{ __('Controle total') }}</h5>
                             <p class="description">
-                                {{ __('There is also a Fully Customizable CMS Admin Dashboard for this product.') }}
+                                {{ __('O aplicativo permite que você tenha controle total das informações, com um usuário administrador.') }}
                             </p>
                         </div>
                     </div>
@@ -45,19 +45,7 @@
                 <div class="col-lg-4 col-md-6 mr-auto">
                     <div class="card card-signup text-center">
                         <div class="card-header ">
-                            <h4 class="card-title">{{ __('Register') }}</h4>
-                            <div class="social">
-                                <button class="btn btn-icon btn-round btn-twitter">
-                                    <i class="fa fa-twitter"></i>
-                                </button>
-                                <button class="btn btn-icon btn-round btn-dribbble">
-                                    <i class="fa fa-dribbble"></i>
-                                </button>
-                                <button class="btn btn-icon btn-round btn-facebook">
-                                    <i class="fa fa-facebook-f"></i>
-                                </button>
-                                <p class="card-description">{{ __('or be classical') }}</p>
-                            </div>
+                            <h4 class="card-title">{{ __('Cadastrar') }}</h4>
                         </div>
                         <div class="card-body ">
                             <form class="form" method="POST" action="{{ route('register') }}">
@@ -68,7 +56,7 @@
                                             <i class="nc-icon nc-single-02"></i>
                                         </span>
                                     </div>
-                                    <input name="name" type="text" class="form-control" placeholder="Name" value="{{ old('name') }}" required autofocus>
+                                    <input name="name" type="text" class="form-control" placeholder="Nome" value="{{ old('name') }}" required autofocus>
                                     @if ($errors->has('name'))
                                         <span class="invalid-feedback" style="display: block;" role="alert">
                                             <strong>{{ $errors->first('name') }}</strong>
@@ -81,7 +69,7 @@
                                             <i class="nc-icon nc-email-85"></i>
                                         </span>
                                     </div>
-                                    <input name="email" type="email" class="form-control" placeholder="Email" required value="{{ old('email') }}">
+                                    <input name="email" type="email" class="form-control" placeholder="E-mail" required value="{{ old('email') }}">
                                     @if ($errors->has('email'))
                                         <span class="invalid-feedback" style="display: block;" role="alert">
                                             <strong>{{ $errors->first('email') }}</strong>
@@ -94,7 +82,7 @@
                                             <span class="input-group-text"><i class="nc-icon nc-badge"></i></span>
                                         </div>
                                         <select class="form-control{{ $errors->has('user_type') ? ' is-invalid' : '' }}" name="user_type">
-                                            <option value="" selected hidden>{{ __('User Type') }}</option>
+                                            <option value="" selected hidden>{{ __('Tipo de usuario') }}</option>
                                             <option value="1" @if (old('user_type') == 1) selected @endif>{{ __('Admin') }}</option>
                                             <option value="2" @if (old('user_type') == 2) selected @endif>{{ __('Creator') }}</option>
                                             <option value="3" @if (old('user_type') == 3) selected @endif>{{ __('Member') }}</option>
@@ -112,7 +100,7 @@
                                             <i class="nc-icon nc-key-25"></i>
                                         </span>
                                     </div>
-                                    <input name="password" type="password" class="form-control" placeholder="Password" required>
+                                    <input name="password" type="password" class="form-control" placeholder="Senha" required>
                                     @if ($errors->has('password'))
                                         <span class="invalid-feedback" style="display: block;" role="alert">
                                             <strong>{{ $errors->first('password') }}</strong>
@@ -125,7 +113,7 @@
                                             <i class="nc-icon nc-key-25"></i>
                                         </span>
                                     </div>
-                                    <input name="password_confirmation" type="password" class="form-control" placeholder="Password confirmation" required>
+                                    <input name="password_confirmation" type="password" class="form-control" placeholder="Confirmação de senha" required>
                                     @if ($errors->has('password_confirmation'))
                                         <span class="invalid-feedback" style="display: block;" role="alert">
                                             <strong>{{ $errors->first('password_confirmation') }}</strong>
@@ -136,8 +124,8 @@
                                     <label class="form-check-label">
                                         <input class="form-check-input" name="agree_terms_and_conditions" type="checkbox">
                                         <span class="form-check-sign"></span>
-                                            {{ __('I agree to the') }}
-                                        <a href="#something">{{ __('terms and conditions') }}</a>.
+                                            {{ __('Eu concordo com os') }}
+                                        <a href="#something">{{ __('termos e condições') }}</a>.
                                     </label>
                                     @if ($errors->has('agree_terms_and_conditions'))
                                         <span class="invalid-feedback" style="display: block;" role="alert">
@@ -146,7 +134,7 @@
                                     @endif
                                 </div>
                                 <div class="card-footer ">
-                                    <button type="submit" class="btn btn-info btn-round">{{ __('Get Started') }}</button>
+                                    <button type="submit" class="btn btn-info btn-round">{{ __('Cadastrar') }}</button>
                                 </div>
                             </form>
                         </div>

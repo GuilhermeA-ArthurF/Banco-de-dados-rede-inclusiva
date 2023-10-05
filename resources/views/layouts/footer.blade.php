@@ -3,18 +3,16 @@
         <div class="row">
             <nav class="footer-nav">
                 <ul>
-                    <li>
-                        <a href="https://www.creative-tim.com" target="_blank">{{ __('Creative Tim') }}</a>
-                    </li>
-                    <li>
-                        <a href="https://updivision.com" target="_blank">{{ __('UpDivision') }}</a>
-                    </li>
-                    <li>
-                        <a href="http://blog.creative-tim.com/" target="_blank">{{ __('Blog') }}</a>
-                    </li>
-                    <li>
-                        <a href="https://www.creative-tim.com/license" target="_blank">{{ __('Licenses') }}</a>
-                    </li>
+                <li>
+                    <img src="{{ asset('img/logo_ibirite.png') }}" alt="Logo da Prefeitura" width="100px">
+                    
+                </li>
+                <li> 
+                    <a href="https://www.ibirite.mg.gov.br/">
+                        <img src="{{ asset('img/logo_prefeitura.png') }}" alt="Logo da Prefeitura" width="100px">
+                    </a>
+                </li>
+                    
                 </ul>
             </nav>
             <div class="credits ml-auto">
@@ -22,7 +20,7 @@
                     ©
                     <script>
                         document.write(new Date().getFullYear())
-                    </script>{{ __(', made with ') }}<i class="fa fa-heart heart"></i>{{ __(' by ') }}<a class="@if(Auth::guest()) text-white @endif" href="https://www.creative-tim.com" target="_blank">{{ __('Creative Tim') }}</a>{{ __(' and ') }}<a class="@guest text-white @endguest" target="_blank" href="https://updivision.com">{{ __('UPDIVISION') }}</a>
+                    </script>{{ __(', Feito ') }}<i class="fa fa-heart heart"></i>{{ __(' por ') }}<a class="@if(Auth::guest()) text-white @endif" href="https://www.linkedin.com/in/guilherme-augusto-05bb0425b/" target="_blank">{{ __('Guilherme Augusto') }}</a>{{ __(' e ') }}<a class="@guest text-white @endguest" target="_blank" href="https://www.linkedin.com/in/arthurfrade/">{{ __('Arthur Frade') }}</a>
                 </span>
             </div>
         </div>

@@ -11,7 +11,7 @@
                 <form id="RegisterValidation" action="" method="">
                     <div class="card ">
                         <div class="card-header ">
-                            <h4 class="card-title">Register Form</h4>
+                            <h4 class="card-title">Cadastrar</h4>
                         </div>
                         <div class="card-body ">
                             <div class="form-group has-label">
@@ -71,7 +71,7 @@
                             <div class="category form-category">* Required fields</div>
                         </div>
                         <div class="card-footer text-center">
-                            <button type="submit" class="btn btn-primary">Register</button>
+                            <button type="submit" class="btn btn-primary">Registrar</button>
                         </div>
                     </div>
                 </form>

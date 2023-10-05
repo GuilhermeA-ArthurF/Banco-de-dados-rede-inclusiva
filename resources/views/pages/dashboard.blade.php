@@ -3,7 +3,9 @@
     'folderActive' => '',
     'elementActive' => 'dashboard'
 ])
-
+                                                <!--
+                                            ESSA É A INDEX DO TEAMPLATE, APÓS O LOGIN 
+                                                    -->
 @section('content')
     <div class="content">
         <div class="row">
@@ -264,7 +266,7 @@
                                                     </div>
                                                 </td>
                                                 <td>Germany</td>
-                                                <td class="text-right">
+                                                <td class="text-righft">
                                                     1.300
                                                 </td>
                                                 <td class="text-right">

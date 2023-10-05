@@ -3,13 +3,13 @@
     Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
     -->
     <div class="logo">
-        <a href="http://www.creative-tim.com" class="simple-text logo-mini">
+        <a href="{{ route('home') }}" class="simple-text logo-mini">
             <div class="logo-image-small">
                 <img src="{{ asset('img/logo-small.png') }}">
             </div>
         </a>
-        <a href="http://www.creative-tim.com" class="simple-text logo-normal">
-            {{ __('Creative Tim') }}
+        <a href="{{ route('home') }}" class="simple-text logo-normal">
+            {{ __('Rede Inclusiva') }}
         </a>
     </div>
     <div class="sidebar-wrapper">
@@ -34,19 +34,19 @@
                         <li class="{{ $elementActive == 'edit-profile' ? 'active' : '' }}">
                             <a href="{{ route('profile.edit') }}">
                                 <span class="sidebar-mini-icon">{{ __('MP') }}</span>
-                                <span class="sidebar-normal">{{ __('My Profile') }}</span>
+                                <span class="sidebar-normal">{{ __('Meu Perfil') }}</span>
                             </a>
                         </li>
                         <li>
                             <a href="#">
                                 <span class="sidebar-mini-icon">{{ __('EP') }}</span>
-                                <span class="sidebar-normal">{{ __('Edit Profile') }}</span>
+                                <span class="sidebar-normal">{{ __('Editar Perfil') }}</span>
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <span class="sidebar-mini-icon">{{ __('S') }}</span>
-                                <span class="sidebar-normal">{{ __('Settings') }}</span>
+                                <span class="sidebar-mini-icon">{{ __('C') }}</span>
+                                <span class="sidebar-normal">{{ __('Configurações') }}</span>
                             </a>
                         </li>
                         <li>
@@ -54,8 +54,8 @@
                                 @csrf
                             </form>
                             <a onclick="document.getElementById('formLogOutSidebar').submit();">
-                                <span class="sidebar-mini-icon">{{ __('LO') }}</span>
-                                <span class="sidebar-normal">{{ __('Log Out') }}</span>
+                                <span class="sidebar-mini-icon">{{ __('S') }}</span>
+                                <span class="sidebar-normal">{{ __('Sair') }}</span>
                             </a>
                         </li>
                     </ul>
@@ -66,14 +66,14 @@
             <li class="{{ $elementActive == 'dashboard' ? 'active' : '' }}">
                 <a href="{{ route('home') }}">
                     <i class="nc-icon nc-bank"></i>
-                    <p>{{ __('Dashboard') }}</p>
+                    <p>{{ __('Inicio') }}</p>
                 </a>
             </li>
             <li class="{{ $folderActive == 'laravel-examples' ? 'active' : '' }}">
                 <a data-toggle="collapse" aria-expanded="true" href="#laravelExamples">
                     <i class="nc-icon"><img src="{{ asset('img/laravel.svg') }}"></i>
                     <p>
-                            {{ __('Laravel examples') }}
+                            {{ __('Escolas') }}
                         <b class="caret"></b>
                     </p>
                 </a>
