@@ -53,7 +53,7 @@
                 <form id="LoginValidation" action="" method="">
                     <div class="card ">
                         <div class="card-header ">
-                            <h4 class="card-title">Login Form</h4>
+                            <h4 class="card-title">Login Formulário</h4>
                         </div>
                         <div class="card-body ">
                             <div class="form-group has-label">
@@ -80,7 +80,7 @@
                 <form id="TypeValidation" class="form-horizontal" action="" method="">
                     <div class="card ">
                         <div class="card-header ">
-                            <h4 class="card-title">Type Validation</h4>
+                            <h4 class="card-title">Validação</h4>
                         </div>
                         <div class="card-body ">
                             <div class="row">

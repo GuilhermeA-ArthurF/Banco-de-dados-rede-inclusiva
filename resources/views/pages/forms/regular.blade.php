@@ -3,29 +3,29 @@
     'folderActive' => 'forms',
     'elementActive' => 'regular-forms'
 ]) 
-
+                                <!-- TELA DE CADASTRO DE FORMULARIO -->
 @section('content')
     <div class="content">
         <div class="row">
             <div class="col-md-6">
                 <div class="card ">
                     <div class="card-header ">
-                        <h4 class="card-title">Stacked Form</h4>
+                        <h4 class="card-title">Cadastro de formulario</h4>
                     </div>
                     <div class="card-body ">
                         <form method="#" action="#">
-                            <label>Email address</label>
+                            <label>Endereço de e-mail</label>
                             <div class="form-group">
-                                <input type="email" class="form-control" placeholder="Enter email">
+                                <input type="email" class="form-control" placeholder="Digite o e-mail">
                             </div>
-                            <label>Password</label>
+                            <label>Senha</label>
                             <div class="form-group">
-                                <input type="password" class="form-control" placeholder="Password">
+                                <input type="password" class="form-control" placeholder="Senha">
                             </div>
                             <div class="form-check mt-3">
                                 <div class="form-check">
                                     <label class="form-check-label">
-                                        <input class="form-check-input" type="checkbox" value=""> Subscribe to newsletter
+                                        <input class="form-check-input" type="checkbox" value=""> Cadastrar novo formulário
                                         <span class="form-check-sign"></span>
                                     </label>
                                 </div>
@@ -33,38 +33,38 @@
                         </form>
                     </div>
                     <div class="card-footer ">
-                        <button type="submit" class="btn btn-info btn-round">Submit</button>
+                        <button type="submit" class="btn btn-info btn-round">Cadastrar</button>
                     </div>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="card ">
                     <div class="card-header ">
-                        <h4 class="card-title">Horizontal Form</h4>
+                        <h4 class="card-title">Formulario horizontal ??</h4>
                     </div>
                     <div class="card-body ">
                         <form class="form-horizontal">
                             <div class="row">
-                                <label class="col-md-3 col-form-label">Username</label>
+                                <label class="col-md-3 col-form-label">Nome de usuário</label>
                                 <div class="col-md-9">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Username">
+                                        <input type="text" class="form-control" placeholder="Nome de usuário">
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
-                                <label class="col-md-3 col-form-label">Email</label>
+                                <label class="col-md-3 col-form-label">E-mail</label>
                                 <div class="col-md-9">
                                     <div class="form-group">
-                                        <input type="email" class="form-control" placeholder="Email">
+                                        <input type="email" class="form-control" placeholder="E-mail">
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
-                                <label class="col-md-3 col-form-label">Password</label>
+                                <label class="col-md-3 col-form-label">Senha</label>
                                 <div class="col-md-9">
                                     <div class="form-group">
-                                        <input type="password" class="form-control" placeholder="Password">
+                                        <input type="password" class="form-control" placeholder="Senha">
                                     </div>
                                 </div>
                             </div>
@@ -75,7 +75,7 @@
                                         <label class="form-check-label">
                                             <input class="form-check-input" type="checkbox">
                                             <span class="form-check-sign"></span>
-                                            Remember me
+                                            Lembrar usuário
                                         </label>
                                     </div>
                                 </div>
@@ -86,7 +86,7 @@
                         <div class="row">
                             <label class="col-md-3"></label>
                             <div class="col-md-9">
-                                <button type="submit" class="btn btn-info btn-round">Sign in</button>
+                                <button type="submit" class="btn btn-info btn-round">Enviar</button>
                             </div>
                         </div>
                     </div>
@@ -95,7 +95,7 @@
             <div class="col-md-12">
                 <div class="card ">
                     <div class="card-header ">
-                        <h4 class="card-title">Form Elements</h4>
+                        <h4 class="card-title">Elementos do formulário</h4>
                     </div>
                     <div class="card-body ">
                         <form method="get" action="/" class="form-horizontal">

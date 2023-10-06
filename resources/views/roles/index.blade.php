@@ -14,14 +14,14 @@
                         <div class="card-header">
                             <div class="row align-items-center">
                                 <div class="col-8">
-                                    <h3 class="mb-0">{{ __('Roles') }}</h3>
+                                    <h3 class="mb-0">{{ __('Lista de usuários') }}</h3>
                                     <p class="text-sm mb-0">
-                                        {{ __('This is an example of role management. This is a minimal setup in order to get started fast.') }}
+                                        {{ __('Lista curta de usuários criados.') }}
                                     </p>
                                 </div>
                                 @can('create', App\Role::class)
                                     <div class="col-4 text-right">
-                                        <a href="{{ route('role.create') }}" class="btn btn-sm btn-primary">{{ __('Add role') }}</a>
+                                        <a href="{{ route('role.create') }}" class="btn btn-sm btn-primary">{{ __('Criar usuário') }}</a>
                                     </div>
                                 @endcan
                             </div>
@@ -36,9 +36,9 @@
                             <table class="table table-flush"  id="datatable-basic">
                                 <thead class="thead-light">
                                     <tr>
-                                        <th scope="col">{{ __('Name') }}</th>
-                                        <th scope="col">{{ __('Description') }}</th>
-                                        <th scope="col">{{ __('Creation date') }}</th>
+                                        <th scope="col">{{ __('Nome') }}</th>
+                                        <th scope="col">{{ __('Descrição') }}</th>
+                                        <th scope="col">{{ __('Data de criação') }}</th>
                                         @can('manage-users', App\User::class)
                                             <th scope="col"></th>
                                         @endcan

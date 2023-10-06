@@ -4,7 +4,7 @@
     'folderActive' => 'laravel-examples',
     'elementActive' => 'role'
 ])
-
+                                <!-- TELA DE ADMINISTRADOR -->
 @section('content')
     <div class="content">
         <div class="container-fluid mt--6">

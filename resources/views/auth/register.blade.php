@@ -2,7 +2,7 @@
     'class' => 'register-page',
     'backgroundImagePath' => 'img/bg/background_1.jpg'
 ])
-
+                                <!-- TELA DE REGISTRO INICAL -->
 @section('content')
     <div class="content">
         <div class="container">

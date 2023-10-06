@@ -37,18 +37,7 @@
                                 <span class="sidebar-normal">{{ __('Meu Perfil') }}</span>
                             </a>
                         </li>
-                        <li>
-                            <a href="#">
-                                <span class="sidebar-mini-icon">{{ __('EP') }}</span>
-                                <span class="sidebar-normal">{{ __('Editar Perfil') }}</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="sidebar-mini-icon">{{ __('C') }}</span>
-                                <span class="sidebar-normal">{{ __('Configurações') }}</span>
-                            </a>
-                        </li>
+            
                         <li>
                             <form class="dropdown-item" action="{{ route('logout') }}" id="formLogOutSidebar" method="POST" style="display: none;">
                                 @csrf
@@ -103,7 +92,7 @@
                 <a data-toggle="collapse" href="#formsExamples" aria-expanded="{{ $folderActive == 'forms' ? 'true' : '' }}">
                     <i class="nc-icon nc-ruler-pencil"></i>
                     <p>
-                            {{ __('Forms') }}
+                            {{ __('Formulários') }}
                         <b class="caret"></b>
                     </p>
                 </a>
@@ -111,14 +100,14 @@
                     <ul class="nav">
                         <li class="{{ $elementActive == 'regular-forms' ? 'active' : '' }}">
                             <a href="{{ route('page.forms', 'regular') }}">
-                                <span class="sidebar-mini-icon">{{ __('RF') }}</span>
-                                <span class="sidebar-normal">{{ __(' Regular Forms ') }}</span>
+                                <span class="sidebar-mini-icon">{{ __('CF') }}</span>
+                                <span class="sidebar-normal">{{ __(' Criar um formulário padrão ') }}</span>
                             </a>
                         </li>
                         <li class="{{ $elementActive == 'validation' ? 'active' : '' }}">
                             <a href="{{ route('page.forms', 'validation') }}">
                                 <span class="sidebar-mini-icon">{{ __('V') }}</span>
-                                <span class="sidebar-normal">{{ __(' Validation Forms ') }}</span>
+                                <span class="sidebar-normal">{{ __(' Validar formulários ') }}</span>
                             </a>
                         </li>
                     </ul>
@@ -128,7 +117,7 @@
                 <a data-toggle="collapse" href="#tablesExamples" aria-expanded="{{ $folderActive == 'tables' ? 'true' : '' }}">
                     <i class="nc-icon nc-single-copy-04"></i>
                     <p>
-                            {{ __('Tables') }}
+                            {{ __('Tabelas') }}
                         <b class="caret"></b>
                     </p>
                 </a>
@@ -136,14 +125,14 @@
                     <ul class="nav">
                         <li class="{{ $elementActive == 'regular-tables' ? 'active' : '' }}">
                             <a href="{{ route('page.tables', 'regular') }}">
-                                <span class="sidebar-mini-icon">{{ __('RT') }}</span>
-                                <span class="sidebar-normal">{{ __(' Regular Tables ') }}</span>
+                                <span class="sidebar-mini-icon">{{ __('TP') }}</span>
+                                <span class="sidebar-normal">{{ __(' Tabela Padrão ') }}</span>
                             </a>
                         </li>
                         <li class="{{ $elementActive == 'datatables' ? 'active' : '' }}">
                             <a href="{{ route('page.tables', 'datatables') }}">
-                                <span class="sidebar-mini-icon">{{ __('DT') }}</span>
-                                <span class="sidebar-normal">{{ __(' DataTables.net ') }}</span>
+                                <span class="sidebar-mini-icon">{{ __('BG') }}</span>
+                                <span class="sidebar-normal">{{ __(' Banco de dado geral ') }}</span>
                             </a>
                         </li>
                     </ul>
@@ -152,13 +141,13 @@
             <li class="{{ $elementActive == 'charts' ? 'active' : '' }}">
                 <a href="{{ route('page.index', 'charts') }}">
                     <i class="nc-icon nc-chart-bar-32"></i>
-                    <p>{{ __('Charts') }}</p>
+                    <p>{{ __('Gráficos') }}</p>
                 </a>
             </li>
             <li class="{{ $elementActive == 'calendar' ? 'active' : '' }}">
                 <a href="{{ route('page.index', 'calendar') }}">
                     <i class="nc-icon nc-calendar-60"></i>
-                    <p>{{ __('Calendar') }}</p>
+                    <p>{{ __('Calendários') }}</p>
                 </a>
             </li>
         </ul>

@@ -193,7 +193,7 @@
                                             </div>
                                         </td>
                                         <td class="text-left">But I must explain to you how all this mistaken idea of
-                                            denouncing pleasure</td>
+                                            denouncing pleasure<    /td>
                                         <td class="td-actions text-right">
                                             <button type="button" rel="tooltip" title=""
                                                 class="btn btn-info btn-round btn-icon btn-icon-mini btn-neutral"
@@ -219,7 +219,7 @@
                     </div>
                 </div>
             </div>
-            
+
         </div>
     </div>
 @endsection

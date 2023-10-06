@@ -14,14 +14,14 @@
                         <div class="card-header">
                             <div class="row align-items-center">
                                 <div class="col-8">
-                                    <h3 class="mb-0">{{ __('Users') }}</h3>
+                                    <h3 class="mb-0">{{ __('Usuários detalhados') }}</h3>
                                     <p class="text-sm mb-0">
-                                        {{ __('This is an example of user management. This is a minimal setup in order to get started fast.') }}
+                                        {{ __('Lista de usuários detalhados detalhados') }}
                                     </p>
                                 </div>
                                 @can('create', App\User::class)
                                     <div class="col-4 text-right">
-                                        <a href="{{ route('user.create') }}" class="btn btn-sm btn-primary">{{ __('Add user') }}</a>
+                                        <a href="{{ route('user.create') }}" class="btn btn-sm btn-primary">{{ __('Adicionar usuário') }}</a>
                                     </div>
                                 @endcan
                             </div>
@@ -36,11 +36,11 @@
                             <table class="table align-items-center table-flush">
                                 <thead class="thead-light">
                                     <tr>
-                                        <th scope="col">Photo</th>
-                                        <th scope="col">{{ __('Name') }}</th>
-                                        <th scope="col">{{ __('Email') }}</th>
-                                        <th scope="col">{{ __('Role') }}</th>
-                                        <th scope="col">{{ __('Creation Date') }}</th>
+                                        <th scope="col">Foto</th>
+                                        <th scope="col">{{ __('Nome') }}</th>
+                                        <th scope="col">{{ __('E-mail') }}</th>
+                                        <th scope="col">{{ __('Nivel') }}</th>
+                                        <th scope="col">{{ __('Data de criação') }}</th>
                                         @can('manage-users', App\User::class)
                                             <th scope="col"></th>
                                         @endcan
@@ -70,19 +70,19 @@
                                                             <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
                                                                 @if ($user->id != auth()->id())
                                                                     @can('update', $user)
-                                                                        <a class="dropdown-item" href="{{ route('user.edit', $user) }}">{{ __('Edit') }}</a>
+                                                                        <a class="dropdown-item" href="{{ route('user.edit', $user) }}">{{ __('Editar') }}</a>
                                                                     @endcan
                                                                     @can('delete', $user)
                                                                         <form action="{{ route('user.destroy', $user) }}" method="POST">
                                                                             @csrf
                                                                             @method('delete')
                                                                             <button type="button" class="dropdown-item" onclick="confirm('{{ __("Are you sure you want to delete this user?") }}') ? this.parentElement.submit() : ''">
-                                                                                {{ __('Delete') }}
+                                                                                {{ __('Apagar') }}
                                                                             </button>
                                                                         </form>
                                                                     @endcan
                                                                 @else
-                                                                    <a class="dropdown-item" href="{{ route('profile.edit') }}">{{ __('Edit') }}</a>
+                                                                    <a class="dropdown-item" href="{{ route('profile.edit') }}">{{ __('Editar') }}</a>
                                                                 @endif
                                                             </div>
                                                         </div>
