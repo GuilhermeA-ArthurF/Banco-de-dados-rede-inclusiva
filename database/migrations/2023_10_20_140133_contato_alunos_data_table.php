@@ -13,9 +13,9 @@ class ContatoAlunosDataTable extends Migration
      */
     public function up()
     {
-        Schema::create("contato", function (Blueprint $table) {
-        $table->increments("IDcontato");
-        $table->integer("contato")->notNullable();
+        Schema::create('contato', function (Blueprint $table) {
+        $table->increments('idcontato');
+        $table->integer('contato')->notNullable();
         });
     }
 

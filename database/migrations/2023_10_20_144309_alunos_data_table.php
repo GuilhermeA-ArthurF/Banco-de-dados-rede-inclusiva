@@ -24,21 +24,21 @@ class AlunosDataTable extends Migration
             $table->string('periodo_aluno');
             $table->string('turma');
             
-            $table->unsignedInteger('IDenderecos');
-            $table->foreign('IDenderecos')->references('IDenderecos')->on('enderecos');
+            $table->unsignedInteger('idenderecos');
+            $table->foreign('idenderecos')->references('idenderecos')->on('enderecos');
 
             
-            $table->unsignedInteger('IDcontato');
-            $table->foreign('IDcontato')->references('IDcontato')->on('contato');
+            $table->unsignedInteger('idcontato');
+            $table->foreign('idcontato')->references('idcontato')->on('contato');
             
-            $table->unsignedInteger('IDnecessidades');
-            $table->foreign('IDnecessidades')->references('IDnecessidades')->on('necessidades');
+            $table->unsignedInteger('idnecessidades');
+            $table->foreign('idnecessidades')->references('idnecessidades')->on('necessidades');
 
-            $table->unsignedInteger('IDescolas');
-            $table->foreign('IDescolas')->references('IDescolas')->on('escolas');
+            $table->unsignedInteger('idescolas');
+            $table->foreign('idescolas')->references('idescolas')->on('escolas');
 
-            $table->unsignedInteger('IDprofessor');
-            $table->foreign('IDprofessor')->references('IDprofessor')->on('professor');
+            $table->unsignedInteger('idprofessor');
+            $table->foreign('idprofessor')->references('idprofessor')->on('professor');
         });
     }
 
