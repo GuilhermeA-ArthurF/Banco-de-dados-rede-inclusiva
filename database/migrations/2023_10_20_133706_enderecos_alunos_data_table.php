@@ -13,11 +13,11 @@ class EnderecosAlunosDataTable extends Migration
      */
     public function up()
     {
-        Schema::create("enderecos", function (Blueprint $table) {
-            $table->increments("IDenderecos");
-            $table->string("CEP")->notNullable();
-            $table->string("rua")->notNullable();
-            $table->string("cidade")->notNullable();
+        Schema::create('enderecos', function (Blueprint $table) {
+            $table->increments('idenderecos');
+            $table->string('CEP')->notNullable();
+            $table->string('rua')->notNullable();
+            $table->string('cidade')->notNullable();
             
         });
        

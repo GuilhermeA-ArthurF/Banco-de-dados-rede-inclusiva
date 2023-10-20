@@ -13,10 +13,10 @@ class ProfessorAlunosDataTable extends Migration
      */
     public function up()
     {
-        Schema::create("professor", function (Blueprint $table) {
-            $table->increments("IDprofessor");
-            $table->string("professor")->notNullable();
-            $table->integer("idade")->notnullable();
+        Schema::create('professor', function (Blueprint $table) {
+            $table->increments('idprofessor');
+            $table->string('professor')->notNullable();
+            $table->integer('idade')->notnullable();
         });
     }
 
