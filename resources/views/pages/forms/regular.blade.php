@@ -20,7 +20,7 @@
                     <label class="col-sm-2 col-form-label">Nome</label>
                     <div class="col-sm-10">
                         <div class="form-group">
-                            <input type="text" class="form-control" name="nome">
+                            <input type="text" class="form-control" name="Nome">
                         </div>
                     </div>
                 </div>
@@ -28,7 +28,7 @@
                     <label class="col-sm-2 col-form-label">Sobrenome</label>
                     <div class="col-sm-10">
                         <div class="form-group">
-                            <input type="text" class="form-control" name="sobrenome">
+                            <input type="text" class="form-control" name="Sobrenome">
                         </div>
                     </div>
                 </div>
@@ -36,7 +36,7 @@
                     <label class="col-sm-2 col-form-label">Idade</label>
                     <div class="col-sm-10">
                         <div class="form-group">
-                            <input type="number" class="form-control" name="idade">
+                            <input type="number" class="form-control" name="Idade">
                         </div>
                     </div>
                 </div>
@@ -45,14 +45,14 @@
                     <div class="col-sm-10 checkbox-radios">
                         <div class="form-check-radio">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="radio" name="sexo" id="masculino"
+                                <input class="form-check-input" type="radio" name="Sexo" id="masculino"
                                     value="Masculino"> Masculino
                                 <span class="form-check-sign"></span>
                             </label>
                         </div>
                         <div class="form-check-radio">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="radio" name="sexo" id="feminino" value="Feminino"
+                                <input class="form-check-input" type="radio" name="Sexo" id="feminino" value="Feminino"
                                     checked> Feminino
                                 <span class="form-check-sign"></span>
                             </label>
@@ -66,7 +66,7 @@
                     <label class="col-sm-2 col-form-label">Número de telefone</label>
                     <div class="col-sm-10">
                         <div class="form-group">
-                            <input type="text" class="form-control" name="telefone">
+                            <input type="text" class="form-control" name="numeroTelefone">
                         </div>
                     </div>
                 </div>
@@ -77,11 +77,19 @@
                         <h4 class="card-title">Endereço</h4>
                     </div>
                     <div class="card-body ">
+                    <div class="row">
+                            <label class="col-sm-2 col-form-label">CEP</label>
+                            <div class="col-sm-10">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="CEP">
+                                </div>
+                            </div>
+                        </div>
                         <div class="row">
                             <label class="col-sm-2 col-form-label">Rua</label>
                             <div class="col-sm-10">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="rua">
+                                    <input type="text" class="form-control" name="Rua">
                                 </div>
                             </div>
                         </div>
@@ -89,15 +97,7 @@
                             <label class="col-sm-2 col-form-label">Cidade</label>
                             <div class="col-sm-10">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="cidade">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <label class="col-sm-2 col-form-label">CEP</label>
-                            <div class="col-sm-10">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" name="cep">
+                                    <input type="text" class="form-control" name="Cidade">
                                 </div>
                             </div>
                         </div>
@@ -110,34 +110,13 @@
                     </div>
                     <div class="card-body ">
                         <div class="row">
-                            <label class="col-sm-2 col-form-label">Nome</label>
+                            <label class="col-sm-2 col-form-label">Selecione a escola</label>
                             <div class="col-sm-10">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="rua">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <label class="col-sm-2 col-form-label">Rua</label>
-                            <div class="col-sm-10">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" name="cidade">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <label class="col-sm-2 col-form-label">Periodo do aluno</label>
-                            <div class="col-sm-10">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" name="cep">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <label class="col-sm-2 col-form-label">Turma</label>
-                            <div class="col-sm-10">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" name="cep">
+                                    <select name="select">
+                                        <option value="">Escola1 </option>    
+                                
+                                    </select>
                                 </div>
                             </div>
                         </div>
