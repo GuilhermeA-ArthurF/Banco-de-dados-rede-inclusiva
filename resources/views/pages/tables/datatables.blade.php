@@ -10,7 +10,7 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">DataTables.net</h4>
+                        <h4 class="card-title">Pesquisa Tabela</h4>
                     </div>
                     <div class="card-body">
                         <div class="toolbar">
@@ -19,19 +19,19 @@
                         <table id="datatable" class="table table-striped table-bordered" cellspacing="0" width="100%">
                             <thead>
                                 <tr>
-                                    <th>Name</th>
-                                    <th>Position</th>
-                                    <th>Office</th>
-                                    <th>Age</th>
+                                    <th>Nome</th>
+                                    <th>Tutor</th>
+                                    <th>Cidade</th>
+                                    <th>CDI</th>
                                     <th class="disabled-sorting text-right">Actions</th>
                                 </tr>
                             </thead>
                             <tfoot>
                                 <tr>
-                                    <th>Name</th>
-                                    <th>Position</th>
-                                    <th>Office</th>
-                                    <th>Age</th>
+                                <th>Nome</th>
+                                    <th>Tutor</th>
+                                    <th>Cidade</th>
+                                    <th>CDI</th>
                                     <th class="disabled-sorting text-right">Actions</th>
                                 </tr>
                             </tfoot>
@@ -649,7 +649,7 @@
                     responsive: true,
                     language: {
                     search: "_INPUT_",
-                    searchPlaceholder: "Search records",
+                    searchPlaceholder: "Buscar",
                 }
             });
     
