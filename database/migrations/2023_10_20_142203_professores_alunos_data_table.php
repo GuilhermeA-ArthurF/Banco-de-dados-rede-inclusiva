@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class ProfessoresAlunosDataTable extends Migration
+class ProfessorAlunosDataTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class ProfessoresAlunosDataTable extends Migration
      */
     public function up()
     {
-        Schema::create('professores', function (Blueprint $table) {
-            $table->increments("IDprofessores");
-            $table->string("nome")->notNullable();
-            $table->integer("idade")->notnullable();
+        Schema::create('professor', function (Blueprint $table) {
+            $table->increments('idprofessor');
+            $table->string('professor')->notNullable();
+            $table->integer('idade')->notnullable();
         });
     }
 

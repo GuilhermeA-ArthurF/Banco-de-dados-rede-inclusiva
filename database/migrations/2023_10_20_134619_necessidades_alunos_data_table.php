@@ -14,15 +14,15 @@ class NecessidadesAlunosDataTable extends Migration
     public function up()
     {
         Schema::create("necessidades", function (Blueprint $table) {
-            $table->increments("IDnecessidades");
-            $table->boolean("possui_laudo");
-            $table->binary("laudo");
-            $table->dateTime("data_laudo");
-            $table->string("CID");
+            $table->increments('idnecessidades');
+            $table->boolean('possui_lado');
+            $table->binary('laudo');
+            $table->dateTime('data_laudo');
+            $table->string('CID');
             
         });
     }
-
+   
     /**
      * Reverse the migrations.
      *
