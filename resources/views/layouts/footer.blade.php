@@ -4,8 +4,7 @@
             <nav class="footer-nav">
                 <ul>
                 <li>
-                    <img src="{{ asset('img/logo_ibirite.png') }}" alt="Logo da Prefeitura" width="100px">
-                    
+                    <img src="{{ asset('img/logo_ibirite.png') }}" alt="Logo da Prefeitura" width="100px"> 
                 </li>
                 <li> 
                     <a href="https://www.ibirite.mg.gov.br/">
