@@ -146,14 +146,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <label class="col-sm-2 col-form-label">Patologia</label>
-                        <div class="col-sm-10">
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="cidade">
-                            </div>
-                        </div>
-                    </div>
+                    
                     <div class="row">
                         <label class="col-sm-2 col-form-label">CID</label>
                         <div class="col-sm-10">
