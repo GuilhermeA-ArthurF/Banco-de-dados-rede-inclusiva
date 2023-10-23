@@ -1,6 +1,12 @@
 <?php
 
+use App\Models\Alunos;
 use Database\Seeders\AlunosTableSeeder;
+use Database\Seeders\EscolasTableSeeder;
+use Database\Seeders\ProfessoresTableSeeder;
+use Database\Seeders\ContatosTableSeeder;
+use Database\Seeders\EnderecosTableSeeder;
+use Database\Seeders\NecessidadesTableSeeder;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -20,11 +26,18 @@ class DatabaseSeeder extends Seeder
         DB::table('item_tag')->truncate();
         DB::table('categories')->truncate();
         DB::table('items')->truncate();
+        
         DB::table('alunos')->truncate();
+        DB::table('escolas')->truncate();
+        DB::table('necessidades')->truncate();
+        DB::table('contatos')->truncate();
+        DB::table('professores')->truncate();
 
         $this->call([RolesTableSeeder::class, UsersTableSeeder::class]);
-        $this->call([TagsTableSeeder::class, CategoriesTableSeeder::class, ItemsTableSeeder::class, AlunosTableSeeder::class]);
-
+        $this->call([TagsTableSeeder::class, CategoriesTableSeeder::class, ItemsTableSeeder::class]);
+        $this->call([EscolasTableSeeder::class ,ProfessoresTableSeeder::class, ContatosTableSeeder::class, NecessidadesTableSeeder::class,  EnderecosTableSeeder::class]);
+        $this->call([AlunosTableSeeder::class]);
+        
         DB::statement('SET FOREIGN_KEY_CHECKS=1');
     }
 }

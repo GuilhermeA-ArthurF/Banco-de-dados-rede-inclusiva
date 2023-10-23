@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class ProfessorAlunosDataTable extends Migration
+class CreateEscolasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class ProfessorAlunosDataTable extends Migration
      */
     public function up()
     {
-        Schema::create("professor", function (Blueprint $table) {
-            $table->increments("IDprofessor");
-            $table->string("professor")->notNullable();
-            $table->integer("idade")->notnullable();
+        Schema::create('escolas', function (Blueprint $table) {
+            $table->id();
+            $table->timestamps();
         });
     }
 
@@ -27,6 +26,6 @@ class ProfessorAlunosDataTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists("professor");
+        Schema::dropIfExists('escolas');
     }
 }

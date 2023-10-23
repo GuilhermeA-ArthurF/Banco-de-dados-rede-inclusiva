@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class ContatoAlunosDataTable extends Migration
+class CreateContatosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class ContatoAlunosDataTable extends Migration
      */
     public function up()
     {
-        Schema::create("contato", function (Blueprint $table) {
-        $table->increments("IDcontato");
-        $table->integer("contato")->notNullable();
+        Schema::create('contatos', function (Blueprint $table) {
+            $table->id();
+            $table->timestamps();
         });
     }
 
@@ -26,6 +26,6 @@ class ContatoAlunosDataTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('contatos');
     }
 }

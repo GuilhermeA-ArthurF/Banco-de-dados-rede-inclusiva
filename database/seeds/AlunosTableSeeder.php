@@ -12,8 +12,8 @@ class AlunosTableSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
-    {
+    public function run() 
+        {
         DB::table('alunos')->insert([
             'Nome' => 'João',
             'Sobrenome' => 'Silva',
@@ -23,12 +23,11 @@ class AlunosTableSeeder extends Seeder
             'final_do_cadastro' => '2023-10-23 14:30:00', 
             'periodo_aluno' => 'Manhã',
             'turma' => 'A',
-            'IDenderecos' => 1,
-            'IDcontato' => 1,
-            'IDnecessidades' => 1,
-            'IDescolas' => 1,
-            'IDprofessor' => 1
+            'IDenderecos'=> 1,
+            'IDnecessidades'=> 1,
+            'IDcontatos'=> 1,            
+            'IDprofessores'=>1,
+            'IDescolas'=>1
         ]);
-
     }
 }

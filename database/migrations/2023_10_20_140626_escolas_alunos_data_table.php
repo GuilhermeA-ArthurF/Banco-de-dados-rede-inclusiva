@@ -13,7 +13,7 @@ class EscolasAlunosDataTable extends Migration
      */
     public function up()
     {
-        Schema::create("escolas", function (Blueprint $table) {
+        Schema::create('escolas', function (Blueprint $table) {
         $table->increments("IDescolas");
         $table->string("cep")->notNullable();
         $table->string("nome")->notNullable();
