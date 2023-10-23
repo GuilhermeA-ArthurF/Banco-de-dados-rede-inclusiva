@@ -1,5 +1,6 @@
 <?php
 
+use Database\Seeders\AlunosTableSeeder;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -22,7 +23,7 @@ class DatabaseSeeder extends Seeder
         DB::table('alunos')->truncate();
 
         $this->call([RolesTableSeeder::class, UsersTableSeeder::class]);
-        $this->call([TagsTableSeeder::class, CategoriesTableSeeder::class, ItemsTableSeeder::class, TabelaAluno::class]);
+        $this->call([TagsTableSeeder::class, CategoriesTableSeeder::class, ItemsTableSeeder::class, AlunosTableSeeder::class]);
 
         DB::statement('SET FOREIGN_KEY_CHECKS=1');
     }

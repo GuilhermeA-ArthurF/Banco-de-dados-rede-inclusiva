@@ -20,9 +20,14 @@ class AlunosTableSeeder extends Seeder
             'Idade' => 18,
             'Sexo' => 'M', 
             'Data_do_cadastro' => now(), 
-            'final_do_cadastro' => null, 
+            'final_do_cadastro' => '2023-10-23 14:30:00', 
             'periodo_aluno' => 'Manhã',
             'turma' => 'A',
+            'IDenderecos' => 1,
+            'IDcontato' => 1,
+            'IDnecessidades' => 1,
+            'IDescolas' => 1,
+            'IDprofessor' => 1
         ]);
 
     }
