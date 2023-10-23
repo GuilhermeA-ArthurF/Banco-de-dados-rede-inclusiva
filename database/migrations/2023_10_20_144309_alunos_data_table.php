@@ -14,30 +14,30 @@ class AlunosDataTable extends Migration
     public function up()
     {
         Schema::create('alunos', function (Blueprint $table) {
-            $table->increments('IDAlunos');
-            $table->string('Nome')->notNullable();
+            $table->id('IDAlunos');
+            $table->string('Nome')->notNullable()->index();
             $table->string('Sobrenome')->notNullable();
-            $table->integer('Idade')->notNullable();
+            $table->integer('Idade')->notNullable()->index();;
             $table->char('Sexo', 1)->notNullable();
             $table->dateTime('Data_do_cadastro');
             $table->dateTime('final_do_cadastro');
             $table->string('periodo_aluno');
-            $table->string('turma');
+            $table->string('turma')->index();;
             
-            $table->unsignedInteger('idenderecos');
+            $table->unsignedInteger('idenderecos')->index();
             $table->foreign('idenderecos')->references('idenderecos')->on('enderecos');
 
             
-            $table->unsignedInteger('idcontato');
+            $table->unsignedInteger('idcontato')->index();
             $table->foreign('idcontato')->references('idcontato')->on('contato');
             
-            $table->unsignedInteger('idnecessidades');
+            $table->unsignedInteger('idnecessidades')->index();
             $table->foreign('idnecessidades')->references('idnecessidades')->on('necessidades');
 
-            $table->unsignedInteger('idescolas');
+            $table->unsignedInteger('idescolas')->index();
             $table->foreign('idescolas')->references('idescolas')->on('escolas');
 
-            $table->unsignedInteger('idprofessor');
+            $table->unsignedInteger('idprofessor')->index();;
             $table->foreign('idprofessor')->references('idprofessor')->on('professor');
         });
     }
