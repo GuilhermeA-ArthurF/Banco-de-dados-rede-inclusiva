@@ -1,8 +1,10 @@
 <?php
 
+namespace Database\Seeders;
+
 use Illuminate\Database\Seeder;
 
-class AlunosTableSeeder extends Seeder
+class TabelaAluno extends Seeder
 {
     /**
      * Run the database seeds.
