@@ -1,6 +1,13 @@
 <?php
 
+<<<<<<< Updated upstream
 use Illuminate\Database\Seeder;
+=======
+namespace Database\Seeders;
+
+use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+>>>>>>> Stashed changes
 
 class AlunosTableSeeder extends Seeder
 {
@@ -12,6 +19,7 @@ class AlunosTableSeeder extends Seeder
     public function run()
     {
         DB::table('alunos')->insert([
+<<<<<<< Updated upstream
             'Nome' => 'Travel',
             'created_at' => now(),
             'updated_at' => now()
@@ -40,5 +48,17 @@ class AlunosTableSeeder extends Seeder
             'created_at' => now(),
             'updated_at' => now()
         ]);
+=======
+            'Nome' => 'João',
+            'Sobrenome' => 'Silva',
+            'Idade' => 18,
+            'Sexo' => 'M', 
+            'Data_do_cadastro' => now(), 
+            'final_do_cadastro' => null, 
+            'periodo_aluno' => 'Manhã',
+            'turma' => 'A',
+        ]);
+
+>>>>>>> Stashed changes
     }
 }
