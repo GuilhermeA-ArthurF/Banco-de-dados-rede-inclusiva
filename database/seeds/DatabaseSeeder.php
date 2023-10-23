@@ -19,9 +19,10 @@ class DatabaseSeeder extends Seeder
         DB::table('item_tag')->truncate();
         DB::table('categories')->truncate();
         DB::table('items')->truncate();
+        DB::table('alunos')->truncate();
 
         $this->call([RolesTableSeeder::class, UsersTableSeeder::class]);
-        $this->call([TagsTableSeeder::class, CategoriesTableSeeder::class, ItemsTableSeeder::class]);
+        $this->call([TagsTableSeeder::class, CategoriesTableSeeder::class, ItemsTableSeeder::class, TabelaAluno::class]);
 
         DB::statement('SET FOREIGN_KEY_CHECKS=1');
     }
