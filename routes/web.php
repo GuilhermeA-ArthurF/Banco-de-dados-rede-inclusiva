@@ -29,6 +29,7 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::resource('item', 'ItemController', ['except' => ['show']]);
 	Route::resource('role', 'RoleController', ['except' => ['show', 'destroy']]);
 	Route::resource('user', 'UserController', ['except' => ['show']]);
+	
 
 	Route::get('profile', ['as' => 'profile.edit', 'uses' => 'ProfileController@edit']);
 	Route::put('profile', ['as' => 'profile.update', 'uses' => 'ProfileController@update']);
@@ -41,4 +42,6 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('pages/{page}', ['as' => 'page.pages', 'uses' => 'PageController@pages']);
 	Route::get('tables/{page}', ['as' => 'page.tables', 'uses' => 'PageController@tables']);
 	Route::get('{page}', ['as' => 'page.index', 'uses' => 'PageController@index']);
+
+	
 });

@@ -92,7 +92,7 @@
                 <a data-toggle="collapse" href="#formsExamples" aria-expanded="{{ $folderActive == 'forms' ? 'true' : '' }}">
                     <i class="nc-icon nc-ruler-pencil"></i>
                     <p>
-                            {{ __('Formulários') }}
+                            {{ __('Cadastrar/validar') }}
                         <b class="caret"></b>
                     </p>
                 </a>
@@ -100,8 +100,8 @@
                     <ul class="nav">
                         <li class="{{ $elementActive == 'regular-forms' ? 'active' : '' }}">
                             <a href="{{ route('page.forms', 'regular') }}">
-                                <span class="sidebar-mini-icon">{{ __('CF') }}</span>
-                                <span class="sidebar-normal">{{ __(' Criar um formulário padrão ') }}</span>
+                                <span class="sidebar-mini-icon">{{ __('CA') }}</span>
+                                <span class="sidebar-normal">{{ __(' Cadastrar alunos') }}</span>
                             </a>
                         </li>
                         <li class="{{ $elementActive == 'validation' ? 'active' : '' }}">
