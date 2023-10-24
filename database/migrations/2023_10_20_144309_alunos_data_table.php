@@ -28,8 +28,8 @@ class AlunosDataTable extends Migration
             $table->foreign('IDenderecos')->references('IDenderecos')->on('enderecos');
 
             
-            $table->unsignedInteger('IDcontato');
-            $table->foreign('IDcontato')->references('IDcontato')->on('contato');
+            $table->unsignedInteger('IDcontatos');
+            $table->foreign('IDcontatos')->references('IDcontatos')->on('contato');
             
             $table->unsignedInteger('IDnecessidades');
             $table->foreign('IDnecessidades')->references('IDnecessidades')->on('necessidades');
@@ -37,8 +37,8 @@ class AlunosDataTable extends Migration
             $table->unsignedInteger('IDescolas');
             $table->foreign('IDescolas')->references('IDescolas')->on('escolas');
 
-            $table->unsignedInteger('IDprofessor');
-            $table->foreign('IDprofessor')->references('IDprofessor')->on('professor');
+            $table->unsignedInteger('IDprofessores');
+            $table->foreign('IDprofessores')->references('IDprofessores')->on('professores');
         });
     }
 

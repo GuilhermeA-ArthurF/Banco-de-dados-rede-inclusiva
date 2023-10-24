@@ -22,10 +22,6 @@ class DatabaseSeeder extends Seeder
 
         DB::table('roles')->truncate();
         DB::table('users')->truncate();
-        DB::table('tags')->truncate();
-        DB::table('item_tag')->truncate();
-        DB::table('categories')->truncate();
-        DB::table('items')->truncate();
         
         DB::table('alunos')->truncate();
         DB::table('escolas')->truncate();
@@ -34,8 +30,8 @@ class DatabaseSeeder extends Seeder
         DB::table('professores')->truncate();
 
         $this->call([RolesTableSeeder::class, UsersTableSeeder::class]);
-        $this->call([TagsTableSeeder::class, CategoriesTableSeeder::class, ItemsTableSeeder::class]);
-        $this->call([EscolasTableSeeder::class ,ProfessoresTableSeeder::class, ContatosTableSeeder::class, NecessidadesTableSeeder::class,  EnderecosTableSeeder::class]);
+        $this->call([EscolasTableSeeder::class ,ProfessoresTableSeeder::class, ContatosTableSeeder::class,
+        NecessidadesTableSeeder::class,  EnderecosTableSeeder::class]);
         $this->call([AlunosTableSeeder::class]);
         
         DB::statement('SET FOREIGN_KEY_CHECKS=1');
