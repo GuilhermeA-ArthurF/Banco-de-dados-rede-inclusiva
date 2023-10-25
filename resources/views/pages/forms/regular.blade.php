@@ -3,8 +3,13 @@
 'folderActive' => 'forms',
 'elementActive' => 'regular-forms'
 ])
+
+
 <!-- TELA DE CADASTRO DE FORMULARIO -->
 @section('content')
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <br>
 <br>
 <br>
@@ -85,22 +90,34 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <label class="col-sm-2 col-form-label">Rua</label>
-                            <div class="col-sm-5">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" name="Rua">
-                                </div>
-                            </div>
-                        </div>
+
                         <div class="row">
                             <label class="col-sm-2 col-form-label">Cidade</label>
                             <div class="col-sm-5">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="Cidade">
+                                    <input type="text" class="form-control" name="localidade">
                                 </div>
                             </div>
                         </div>
+
+                        <div class="row">
+                            <label class="col-sm-2 col-form-label">Rua</label>
+                            <div class="col-sm-5">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="logradouro">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <label class="col-sm-2 col-form-label">Bairro</label>
+                            <div class="col-sm-5">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="bairro">
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
                 <!-- Escola -->
@@ -154,24 +171,71 @@
                             </div>
                         </div>
                     </div>
+
+                </div>
+
+                <div class="card ">
+                    <div class="card-header ">
+                        <h4 class="card-title">CID</h4>
+                    </div>
                     <div class="row">
                         <label class="col-sm-2 col-form-label">CID</label>
                         <div class="col-sm-3">
                             <div class="form-group">
-                                <input type="text" class="form-control" name="CID">
+                                <input type="text" class="form-control" name="codigo_cid" id="codigo_cid"
+                                    placeholder="Pesquisar por nome ou código CID">
                             </div>
                         </div>
                     </div>
                 </div>
         </div>
-
-        <div class="card-footer ">
-            <button type="submit" class="btn btn-info btn-round">Cadastrar</button>
-        </div>
-        </form>
     </div>
 </div>
+
+<div class="card-footer ">
+    <button type="submit" class="btn btn-info btn-round">Cadastrar</button>
 </div>
+</form>
+</div>
+</div>
+</div>
+
+
+<script>
+    $('input[name="CEP"]').on('blur', function () {
+        function limpa_formulario_cep() {
+            $('input[name="logradouro"]').val('');
+            $('input[name="localidade"]').val('');
+            $('input[name="bairro"]').val('');
+        }
+
+        var cep = $(this).val();
+        var cep_exibido = cep;
+        cep = cep.replace(/-/g, '');
+
+        if (cep.length <= 8) {
+            cep = cep.replace(/(\d{5})(\d{3})/, '$1-$2');
+        }
+        $(this).val(cep);
+
+        if (cep_exibido.match(/^\d{8}$/)) {
+            limpa_formulario_cep();
+
+            $.getJSON("https://viacep.com.br/ws/" + cep_exibido + "/json/?callback=?", function (dados) {
+                if (!("erro" in dados)) {
+                    $('input[name="logradouro"]').val(dados.logradouro);
+                    $('input[name="bairro"]').val(dados.bairro);
+                    $('input[name="localidade"]').val(dados.localidade);
+                } else {
+                    limpa_formulario_cep();
+                    alert("CEP não encontrado.");
+                }
+            });
+        } else {
+            limpa_formulario_cep();
+            alert("Formato de CEP inválido.");
+        }
+    });
+</script>
+
 @endsection
-
-

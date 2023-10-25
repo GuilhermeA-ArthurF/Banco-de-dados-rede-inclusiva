@@ -42,6 +42,7 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('pages/{page}', ['as' => 'page.pages', 'uses' => 'PageController@pages']);
 	Route::get('tables/{page}', ['as' => 'page.tables', 'uses' => 'PageController@tables']);
 	Route::get('{page}', ['as' => 'page.index', 'uses' => 'PageController@index']);
+	
 
 	
 });
