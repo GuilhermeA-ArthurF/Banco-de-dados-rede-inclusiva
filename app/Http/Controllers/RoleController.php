@@ -40,6 +40,7 @@ class RoleController extends Controller
 
         return view('roles.index', ['roles' => $model->all()]);
     }
+    
 
     /**
      * Show the form for creating a new role

@@ -1,77 +1,126 @@
 @extends('layouts.app', [
-    'title' => __('Role Management'),
+    'title' => __('Cadastrar Escola'),
     'class' => '',
     'folderActive' => 'laravel-examples',
-    'elementActive' => 'role'
+    'elementActive' => 'role',
 ])
 
 @section('content')
-    <div class="content">
-        <div class="container-fluid mt--6">
-            <div class="row">
-                <div class="col">
-                    <div class="card">
-                        <div class="card-header">
-                            <div class="row align-items-center">
-                                <div class="col-8">
-                                    <h3 class="mb-0">{{ __('Lista de usuários') }}</h3>
-                                    <p class="text-sm mb-0">
-                                        {{ __('Lista curta de usuários criados.') }}
-                                    </p>
-                                </div>
-                                @can('create', App\Role::class)
-                                    <div class="col-4 text-right">
-                                        <a href="{{ route('role.create') }}" class="btn btn-sm btn-primary">{{ __('Criar usuário') }}</a>
-                                    </div>
-                                @endcan
-                            </div>
-                        </div>
-                        
-                        <div class="col-12 mt-2">
-                            @include('alerts.success')
-                            @include('alerts.errors')
-                        </div>
+    <br>
+    <br>
+    <br>
+    <div class="container-fluid mt--6">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">Cadastrar Escola</h4>
+            </div>
+            <div class="card-body">
+                <form method="post" action="{{ route('salvar-escola') }}" class="form-horizontal">
+                    @csrf
 
-                        <div class="table-responsive py-4">
-                            <table class="table table-flush"  id="datatable-basic">
-                                <thead class="thead-light">
-                                    <tr>
-                                        <th scope="col">{{ __('Nome') }}</th>
-                                        <th scope="col">{{ __('Descrição') }}</th>
-                                        <th scope="col">{{ __('Data de criação') }}</th>
-                                        @can('manage-users', App\User::class)
-                                            <th scope="col"></th>
-                                        @endcan
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach ($roles as $role)
-                                        <tr>
-                                            <td>{{ $role->name }}</td>
-                                            <td>{{ $role->description }}</td>
-                                            <td>{{ $role->created_at->format('d/m/Y H:i') }}</td>
-                                            @can('manage-users', App\User::class)
-                                                <td class="text-right">
-                                                    @can('update', $role)
-                                                        <div class="dropdown">
-                                                            <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                <i class="nc-icon nc-bullet-list-67"></i>
-                                                            </a>
-                                                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                                                <a class="dropdown-item" href="{{ route('role.edit', $role) }}">{{ __('Edit') }}</a>
-                                                            </div>
-                                                        </div>
-                                                    @endcan
-                                                </td>
-                                            @endcan
-                                        </tr>
-                                    @endforeach
-                                </tbody>
-                            </table>
+                    <!-- Nome da Escola -->
+                    <div class="form-group row">
+                        <label for="Nome" class="col-sm-2 col-form-label">Nome da Escola</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="nome" id="nome">
                         </div>
                     </div>
-                </div>
+                    <!-- CEP -->
+                    <div class="form-group row">
+                        <label for="CEP" class="col-sm-2 col-form-label">CEP</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="cep" id="cep">
+                        </div>
+                    </div>
+                    <!-- Rua -->
+                    <div class="form-group row">
+                        <label for="Rua" class="col-sm-2 col-form-label">Rua</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="rua" id="rua">
+                        </div>
+                    </div>
+                    <!-- Bairro -->
+                    <div class="form-group row">
+                        <label for="Bairro" class="col-sm-2 col-form-label">Bairro</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="bairro" id="bairro">
+                        </div>
+                    </div>
+                    
+                    <!-- Botão de envio -->
+                    <div class="form-group row">
+                        <div class="col-sm-10 offset-sm-2">
+                            <button type="submit" class="btn btn-info btn-round">Cadastrar</button>
+                        </div>
+                    </div>
+                    @csrf 
+                </form>
+
             </div>
+            @if (session('success'))
+                <div class="card-footer">
+                    <div class="alert alert-success">
+                        {{ session('success') }}
+                    </div>
+                </div>
+            @endif
         </div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $('input[name="cep"]').on('blur', function() {
+            function limpa_formulario_cep() {
+                $('input[name="rua"]').val('');
+                $('input[name="bairro"]').val('');
+            }
+
+            var cep = $(this).val();
+            var cep_exibido = cep;
+            cep = cep.replace(/-/g, '');
+
+            if (cep.length <= 8) {
+                cep = cep.replace(/(\d{5})(\d{3})/, '$1-$2');
+            }
+            $(this).val(cep);
+
+            if (cep_exibido.match(/^\d{8}$/)) {
+                limpa_formulario_cep();
+
+                $.getJSON("https://viacep.com.br/ws/" + cep_exibido + "/json/?callback=?", function(dados) {
+                    if (!("erro" in dados)) {
+                        $('input[name="rua"]').val(dados.logradouro);
+                        $('input[name="bairro"]').val(dados.bairro);
+                    } else {
+                        limpa_formulario_cep();
+                        alert("CEP não encontrado.");
+                    }
+                });
+            } else {
+                limpa_formulario_cep();
+                alert("Formato de CEP inválido.");
+            }
+        });
+    </script>
+    <script>
+        $('form').on('submit', function (e) {
+            e.preventDefault();
+            
+            var form = $(this);
+            var url = form.attr('action');
+            
+            $.ajax({
+                type: 'POST',
+                url: url,
+                data: form.serialize(),
+                success: function (response) {
+                    // Limpar campos do formulário
+                    form.trigger('reset');
+                    
+                    // Exibir mensagem de sucesso
+                    $('.alert-success').text(response.message).show();
+                }
+            });
+        });
+    </script>
 @endsection

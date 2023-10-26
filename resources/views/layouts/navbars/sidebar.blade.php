@@ -71,8 +71,8 @@
                         @if (Auth::user()->role_id == 1)
                             <li class="{{ $elementActive == 'role' ? 'active' : '' }}">
                                 <a href="{{ route('page.index', 'role') }}">
-                                    <span class="sidebar-mini-icon">{{ __('LI') }}</span>
-                                    <span class="sidebar-normal">{{ __(' Lista de usuários ') }}</span>
+                                    <span class="sidebar-mini-icon">{{ __('CE') }}</span>
+                                    <span class="sidebar-normal">{{ __(' Cadastrar Escolas ') }}</span>
                                 </a>
                             </li>
                         @endif

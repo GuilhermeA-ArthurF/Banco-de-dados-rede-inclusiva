@@ -19,6 +19,7 @@ class EscolasAlunosDataTable extends Migration
         $table->string("nome")->notNullable();
         $table->string("rua")->notNullable();
         $table->string("bairro")->notNullable();
+        $table->timestamps();
         });
     }
 

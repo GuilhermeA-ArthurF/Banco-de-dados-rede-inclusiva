@@ -7,14 +7,16 @@
 
 <!-- TELA DE CADASTRO DE FORMULARIO -->
 @section('content')
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+<br>
+<br>
 <br>
 <br>
 <br>
 <div class="col-md-12">
-    <div class="card ">
+    <div class="card">
         <div class="card-header ">
             <h4 class="card-title">Cadastrar aluno</h4>
         </div>
@@ -188,13 +190,14 @@
                         </div>
                     </div>
                 </div>
+                <div class="card-footer ">
+                    <button type="submit" class="btn btn-info btn-round">Cadastrar</button>
+                </div>
         </div>
     </div>
 </div>
 
-<div class="card-footer ">
-    <button type="submit" class="btn btn-info btn-round">Cadastrar</button>
-</div>
+
 </form>
 </div>
 </div>
@@ -237,5 +240,42 @@
         }
     });
 </script>
+<script>
+    var j = jQuery.noConflict();
+
+    j(document).ready(function() {
+        j("#codigo_cid").autocomplete({
+            source: function(request, response) {
+                j.ajax({
+                    url: "http://localhost:8080/cid10/",
+                    dataType: "json",
+                    data: {
+                        termo: request.term
+                    },
+                    success: function(data) {
+                        var term = request.term.toLowerCase();
+                        var filteredData = data.filter(function(item) {
+                
+                            return item.nome.toLowerCase().includes(term) || item.codigo.toLowerCase().includes(term);
+                        }).map(function(item) {
+                            return {
+                                label: item.codigo + ": " + item.nome,
+                                value: item.codigo
+                            };
+                        });
+
+                        var maxResults = 5;
+                        response(filteredData.slice(0, maxResults));
+                    }
+                });
+            },
+            minLength: 3,
+            select: function(event, ui) {
+                j("#codigo_cid").val(ui.item.value);
+            }
+        });
+    });
+</script>
+
 
 @endsection

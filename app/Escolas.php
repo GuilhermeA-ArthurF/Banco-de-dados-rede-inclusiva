@@ -8,8 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Escolas extends Model
 {
     protected $table = 'escolas';
-    
+    public $timestamps = false;
+
     protected $fillable = [
-        'CEP', 'nome', 'rua', 'bairro'
+        'cep', 'nome', 'rua', 'bairro'
     ];
 }
