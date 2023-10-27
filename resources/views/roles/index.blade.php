@@ -66,7 +66,53 @@
             @endif
         </div>
     </div>
-
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Escolas</h4>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead class="">
+                                <th>
+                                    Nome
+                                </th>
+                                <th>
+                                    Rua
+                                </th>
+                                <th>
+                                    Bairro
+                                </th>
+                                <th class="text-right">
+                                    Opções
+                                </th>
+                            </thead>
+                            <tbody>
+                                @foreach($escolas as $escola)
+                                <tr>
+                                    <td>
+                                        {{ $escola->nome }}
+                                    </td>
+                                    <td>
+                                        {{ $escola->rua }}
+                                    </td>
+                                    <td>
+                                        {{ $escola->bairro }}
+                                    </td>
+                                    <td class="text-right">
+                                      
+                                    </td>
+                                </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script>

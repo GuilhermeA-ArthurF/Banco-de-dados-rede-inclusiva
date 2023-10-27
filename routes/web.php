@@ -43,8 +43,8 @@ Route::group(['middleware' => 'guest'], function() {
 	Route::get('tables/{page}', ['as' => 'page.tables', 'uses' => 'PageController@tables']);
 	Route::get('{page}', ['as' => 'page.index', 'uses' => 'PageController@index']);
 
-	Route::get('/cadastrar-escola', 'EscolaController@cadastrarEscolaForm')->name('cadastrar-escola');
-	Route::post('/salvar-escola', 'EscolaController@salvarEscola')->name('salvar-escola');	
-	Route::get('/listar-escolas', 'EscolaController@listarEscolas')->name('listar-escolas');
+	Route::get('/role', 'EscolaController@cadastrarEscolaForm')->name('cadastrar-escola');
+	Route::post('/role', 'EscolaController@salvarEscola')->name('salvar-escola');
+	Route::get('/role', 'EscolaController@listarEscolas')->name('listar-escolas');	
 
 });

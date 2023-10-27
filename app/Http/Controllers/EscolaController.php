@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Escolas;
+use Illuminate\Support\Facades\Log;
 
 class EscolaController extends Controller
 {
@@ -36,9 +37,10 @@ class EscolaController extends Controller
 
 
     }
-    public function listarEscolas()
-    {
-        $escolas = Escolas::all();
-        return view('roles.index', compact('escolas'));
-    }
+  public function listarEscolas()
+{
+    $escolas = Escolas::all();
+    return view('roles.index', compact('escolas'));
+}
+
 }
