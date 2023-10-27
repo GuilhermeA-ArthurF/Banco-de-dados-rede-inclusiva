@@ -45,5 +45,6 @@ Route::group(['middleware' => 'guest'], function() {
 
 	Route::get('/cadastrar-escola', 'EscolaController@cadastrarEscolaForm')->name('cadastrar-escola');
 	Route::post('/salvar-escola', 'EscolaController@salvarEscola')->name('salvar-escola');	
-	
+	Route::get('/listar-escolas', 'EscolaController@listarEscolas')->name('listar-escolas');
+
 });

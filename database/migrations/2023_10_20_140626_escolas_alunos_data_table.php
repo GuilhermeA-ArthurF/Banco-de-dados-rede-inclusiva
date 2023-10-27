@@ -30,6 +30,6 @@ class EscolasAlunosDataTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('escolas');
     }
 }

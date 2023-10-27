@@ -28,10 +28,17 @@ class EscolaController extends Controller
             'bairro' => $request->input('bairro'),
         ]);
 
+
+
         $escola->save();
 
         return redirect()->route('cadastrar-escola')->with('success', 'Escola cadastrada com sucesso!');
 
 
+    }
+    public function listarEscolas()
+    {
+        $escolas = Escolas::all();
+        return view('roles.index', compact('escolas'));
     }
 }
