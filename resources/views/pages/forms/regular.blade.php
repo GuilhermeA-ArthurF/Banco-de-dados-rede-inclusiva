@@ -127,19 +127,20 @@
                     <div class="card-header ">
                         <h4 class="card-title">Escola</h4>
                     </div>
-                    <div class="card-body ">
+                    <div class="card-body">
                         <div class="row">
                             <label class="col-sm-2 col-form-label">Selecione a escola</label>
                             <div class="col-sm-10">
                                 <div class="form-group">
                                     <select name="select">
-                                        <option value="">Escola1 </option>
-
+                                        @foreach ($escolas as $escola)
+                                            <option value="{{ $escola->id }}">{{ $escola->nome }}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>                    
                 </div>
                 <!-- NECESSIDADES -->
                 <div class="card ">
@@ -260,7 +261,7 @@
                         }).map(function(item) {
                             return {
                                 label: item.codigo + ": " + item.nome,
-                                value: item.codigo
+                                value: item.codigo + ": " + item.nome
                             };
                         });
 

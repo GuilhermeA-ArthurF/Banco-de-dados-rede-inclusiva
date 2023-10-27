@@ -37,10 +37,17 @@ class EscolaController extends Controller
 
 
     }
-  public function listarEscolas()
-{
-    $escolas = Escolas::all();
-    return view('roles.index', compact('escolas'));
-}
+    public function listarEscolasRole()
+    {
+        $escolas = Escolas::all();
+        return view('roles.index', compact('escolas'));
+
+    }
+    public function listarEscolaRegular()
+    {
+
+        $escolas = Escolas::all();
+        return view('pages.forms.regular', compact('escolas'));
+    }
 
 }

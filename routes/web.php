@@ -45,6 +45,8 @@ Route::group(['middleware' => 'guest'], function() {
 
 	Route::get('/role', 'EscolaController@cadastrarEscolaForm')->name('cadastrar-escola');
 	Route::post('/role', 'EscolaController@salvarEscola')->name('salvar-escola');
-	Route::get('/role', 'EscolaController@listarEscolas')->name('listar-escolas');	
+	Route::get('/role', 'EscolaController@listarEscolasRole')->name('listar-escolas');	
+
+	Route::get('/forms/regular', 'EscolaController@listarEscolaRegular')->name('listar-escolas-regular');	
 
 });
